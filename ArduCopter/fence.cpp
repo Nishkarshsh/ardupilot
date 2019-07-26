@@ -35,7 +35,7 @@ void Copter::fence_check()
             } else {
 
                 // if more than 100m outside the fence just force a land
-                if (fence.get_breach_distance(new_breaches) > AC_FENCE_GIVE_UP_DISTANCE) {
+                if (fence.get_breach_distance(new_breaches) > 0) {
                     set_mode(LAND, MODE_REASON_FENCE_BREACH);
                 } else {
                     switch (fence_act) {
